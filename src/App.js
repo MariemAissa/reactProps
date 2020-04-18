@@ -1,25 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Profile from './profile/profile';
+import image from './assets/Image/thumbnail.jpg'
+import  './profile/profile.css'
+
+const data=[{fullname:"mariem Aissa",profession:"developpeuse fullStack",bio:"biologie"}]
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Profile data={data} >
+            <img className="round" src={image}/>
+        </Profile>
+    </React.Fragment>
   );
 }
 
